@@ -1,6 +1,6 @@
-# FastAPI-BinaryBeats
+# BinaryBeats
 
-FastAPI-BinaryBeats is a project designed to optimize the storage and retrieval of user song preferences using advanced binary encoding techniques. This project uses FastAPI for its simplicity in building the API.
+BinaryBeats is a project designed to optimize the storage and retrieval of user song preferences using advanced binary encoding techniques. This project uses FastAPI for its simplicity in building the API.
 
 ## Approach
 
