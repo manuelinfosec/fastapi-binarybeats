@@ -1,8 +1,7 @@
 from colorama import init
-from dotenv import load_dotenv()
-from fastapi import FastAPI
-
 from database import setup_database
+from dotenv import load_dotenv
+from fastapi import FastAPI
 
 # add terminal color
 init()
