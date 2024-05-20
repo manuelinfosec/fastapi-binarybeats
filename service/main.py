@@ -1,5 +1,6 @@
 from colorama import init
-from database import setup_database
+
+# from database import setup_database
 from dotenv import load_dotenv
 from fastapi import FastAPI
 
@@ -13,10 +14,10 @@ app = FastAPI()
 
 
 # acquire and dispose database connection
-setup_database(app)
+# setup_database(app)
 
 
 @app.get("/")
 def index():
     """Base endpoint"""
-    return {"message": "API Works!"}
+    # return {"message": "API Works!"}

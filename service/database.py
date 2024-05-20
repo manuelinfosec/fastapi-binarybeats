@@ -3,7 +3,7 @@
 import os
 
 from fastapi import FastAPI
-from sqlalchemy import Column, Integer, create_engine
+from sqlalchemy import create_engine
 from sqlalchemy.exc import OperationalError
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -25,22 +25,3 @@ def setup_database(app: FastAPI):
             app.state.db().execute("SELECT 1")
         except OperationalError as err:
             raise RuntimeError("No connection to database") from err
-
-
-# Models
-class User(Base):
-    """User table"""
-
-    __tablename__ = "users"
-
-    id = Column(Integer, primary_key=True, index=True)
-    song_preference = Column(Integer)
-
-
-class Song(Base):
-    """Song table"""
-
-    __tablename__ = "songs"
-
-    id = Column(Integer, primary_key=True, index=True)
-    categories = Column(Integer)
